@@ -7,6 +7,8 @@ from threading import Thread
 from datetime import datetime, timedelta
 import pygame.mixer
 
+
+
 twilio_number = '+18334691315'
 your_phone_number = '+x'
 
@@ -87,16 +89,18 @@ def start_alarm():
 
 app = tk.Tk()
 app.title("CodeClock")
+app.config(bg="gray")
+app.geometry("350x130")
 
-tk.Label(app, text="Start Time (HH:MM)").grid(row=0, column=0)
+tk.Label(app, text="Start Time (HH:MM)", bg="gray", font =("Helvetica 15 bold")).grid(row=0, column=0)
 start_time_entry = tk.Entry(app)
 start_time_entry.grid(row=0, column=1)
 
-tk.Label(app, text="End Time (HH:MM)").grid(row=1, column=0)
+tk.Label(app, text="End Time (HH:MM)", bg= "gray", font =("Helvetica 15 bold")).grid(row=1, column=0)
 end_time_entry = tk.Entry(app)
 end_time_entry.grid(row=1, column=1)
 
-start_button = tk.Button(app, text="Start Alarm", command=start_alarm)
+start_button = tk.Button(app, text="Start Alarm", font =("Helvetica 15 bold"), command=start_alarm, bg="pink")
 start_button.grid(row=2, columnspan=2)
 
 app.mainloop()
