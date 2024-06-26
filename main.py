@@ -96,7 +96,8 @@ tk.Label(app, text="End Time (HH:MM)").grid(row=1, column=0)
 end_time_entry = tk.Entry(app)
 end_time_entry.grid(row=1, column=1)
 
-start_button = tk.Button(app, text="Start", command=start_alarm)
+start_button = tk.Button(app, text="Start Alarm", command=start_alarm)
 start_button.grid(row=2, columnspan=2)
 
 app.mainloop()
+
